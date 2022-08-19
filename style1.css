@@ -1,0 +1,58 @@
+body {
+  background: linear-gradient(to right, red, yellow);
+  background-size: 200% 200%;
+  animation: changebakground 4s infinite;
+  display: flex;
+  flex-wrap: wrap;
+}
+@keyframes changebakground {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+div {
+  width: 10rem;
+  height: 10rem;
+  border: 1.5rem solid black;
+  border-radius: 50%;
+  margin: 5rem auto;
+}
+.div1 {
+  border-top-color: transparent;
+  animation: loader 1s linear infinite;
+}
+.div2 {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation: loader 1s linear infinite;
+}
+.div3 {
+  border-right-color: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  animation: loader 1s linear infinite;
+  align-items: center;
+}
+
+.div3-loader {
+  width: 80%;
+  height: 80%;
+  border: 1rem solid black;
+  border-left-color: transparent;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
